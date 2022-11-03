@@ -3,26 +3,17 @@
 require_relative '../config/environment'
 
 # binding.pry
-car_1 = Car.new(
+Car.create(
   color: "red",
   year: 1987,
   make: "Ford",
   model: "Mustang"
 ) # new car instance / object
-car_2 = Car.new(
+Car.create(
   year: 2014, 
   make: "Chevy", 
   model: "Camero",
   color: "blue"
 )
 
-# car_1.color= "red"
-# car_2.color= "blue"
-
-puts "car_1 is color #{ car_1.color }, year is: #{ car_1.year}, make is: #{ car_1.make }, and model is #{ car_1.model}."
-puts "car_2 is color #{ car_2.color }, year is: #{ car_2.year}, make is: #{ car_2.make }, and model is #{ car_2.model}."
-
-car_1.start
-car_2.start
-
-p car_1
+Car.print_car_models
